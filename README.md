@@ -2,8 +2,6 @@
 
 **This is a fork of the popular Cloud9 IDE due to restrictive licensing of Cloud9v3 published at https://github.com/c9/core. It already includes some small patches for known bugs which lead the IDE to crash or not loading the workspace correctly. Contributions are always welcome.**
 
-# Cloud9 IDE
-
 Cloud9 is an open source IDE built with [Node.JS] on the back-end and JavaScript/HTML5 on the client.
 It is very actively maintained by about 20 developers in both Amsterdam and San Francisco and is one
 component of the hosted service at [c9.io](http://c9.io). The version available here runs on your local system.
