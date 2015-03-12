@@ -149,7 +149,7 @@ module.exports = {
             if (e.getButton()) // !editor.isFocused()
                 return;
             var gutterRegion = editor.renderer.$gutterLayer.getRegion(e);
-            if (editor.session.syntax !== "javascript" || gutterRegion != "markers")
+            if ((editor.session.syntax !== "javascript" || gutterRegion != "markers") && editor.session.syntax !== "c_cpp")
                 return;
             e.stop();
             var row = e.getDocumentPosition().row;

@@ -135,11 +135,22 @@ define(function(require, exports, module) {
             if (message.type === "error") {
                 // TODO: Don't display all errors?
                 if (ide.dispatchEvent("showerrormessage", message) !== false) {
-                    util.alert(
-                        "Error on server",
-                        "Received following error from server:",
-                        JSON.stringify(message.message)
-                    );
+                    if(message.message.toString().trim() == "Session ID missing"){
+                        util.alert(
+                            "Assistent",
+                            "Preparing your workspace ...",
+                            ""
+                        );
+                        console.log("ERROR: "+message.message.toString());
+                        setTimeout(function(){location.reload()},1000);
+                    }
+                    else{
+                        util.alert(
+                            "Error on server",
+                            "Received following error from server:",
+                            JSON.stringify(message.message)
+                        );
+                    }
                 }
             }
 
