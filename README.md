@@ -1,7 +1,6 @@
-**Issues on c9.io** If you have questions regarding the hosted service at [c9.io](http://c9.io)
-including issues with accounts or payments,
-please send them to [support@c9.io](mailto:support@c9.io) rather than submitting as a
-GitHub issue in this repository.
+# Cloud9 IDE
+
+**This is a fork of the popular Cloud9 IDE due to restrictive licensing of Cloud9v3 published at https://github.com/c9/core. It already includes some small patches for known bugs which lead the IDE to crash or not loading the workspace correctly. Contributions are always welcome.**
 
 # Cloud9 IDE
 
@@ -44,7 +43,7 @@ Requirements:
 
 Install:
 
-    git clone https://github.com/ajaxorg/cloud9.git
+    git clone https://github.com/jhausladen/cloud9.git
     cd cloud9
     npm install
 
@@ -139,18 +138,4 @@ The GPL version 3, read it at [http://www.gnu.org/licenses/gpl.txt](http://www.g
 
 ## Contributing
 
-Cloud9 wouldn't be where it is now without contributions. Feel free to fork and improve/enhance Cloud9 in any way your want. If you feel that the Cloud9 community will benefit from your changes, please open a pull request. To protect the interests of the Cloud9 contributors and users we require contributors to sign a Contributors License Agreement (CLA) before we pull the changes into the main repository. Our CLA is the simplest of agreements, requiring that the contributions you make to an ajax.org project are only those you're allowed to make. This helps us significantly reduce future legal risk for everyone involved. It is easy, helps everyone, takes ten minutes, and only needs to be completed once.  There are two versions of the agreement:
-
-1. [The Individual CLA](https://github.com/ajaxorg/cloud9/raw/master/doc/Contributor_License_Agreement-v2.pdf): use this version if you're working on an ajax.org project in your spare time, or can clearly claim ownership of copyright in what you'll be submitting.
-2. [The Corporate CLA](https://github.com/ajaxorg/cloud9/raw/master/doc/Corporate_Contributor_License_Agreement-v2.pdf): have your corporate lawyer review and submit this if your company is going to be contributing to ajax.org projects
-
-If you want to contribute to an ajax.org project please print the CLA and fill it out and sign it. Then either send it by snail mail or fax us or send it back scanned (or as a photo) by email. Please indicate a contact person or pull request your CLA relates to so we can quickly process and handle your agreement. Once you've submitted it, you no longer need to send one for subsequent submissions.
-
-Email: CLA@c9.io
-
-Fax: +31 (0) 206388953
-
-Address: Cloud9 IDE
-  Keizersgracht 241
-  1016 EA, Amsterdam
-  the Netherlands
+Cloud9 wouldn't be where it is now without contributions. Feel free to fork and improve/enhance Cloud9 in any way your want. If you feel that the Cloud9 community will benefit from your changes, please open a pull request.
