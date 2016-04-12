@@ -149,7 +149,9 @@ var config = [
             "ext/autosave/autosave",
             "ext/revisions/revisions",
             "ext/language/liveinspect",
-            "ext/splitview/splitview"
+            "ext/splitview/splitview",
+			"ext/archiver/archiver",
+            "ext/exporter/exporter"
         ]
     }, {
         packagePath: "vfs-architect/local",
@@ -204,6 +206,7 @@ var config = [
     "./cloud9.ide.auth",
     "./cloud9.ide.git",
     "./cloud9.ide.gittools",
+	"./cloud9.ide.archiver",
     "./cloud9.ide.hg",
     "./cloud9.ide.npm",
     "./cloud9.ide.filelist",
