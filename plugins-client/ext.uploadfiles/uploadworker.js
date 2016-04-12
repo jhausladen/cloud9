@@ -12,8 +12,10 @@ self.onmessage = function (e) {
         switch (data.cmd) {
             case 'connect':
                 var filepath = data.path + "/" + data.file.name;
-                if (data._csrf)
+                if (data._csrf){
                     self._csrf = data._csrf;
+                    filepath += (filepath.indexOf("?") > -1 ? "&" : "?") + "_csrf=" + self._csrf;
+                }
 
                 if (!(filepath in connections)) {
                     connections[filepath] = {};
@@ -72,8 +74,8 @@ self.onmessage = function (e) {
 // uploading file in chunks
 self.uploadChunk = function(chunk, filepath, end, blobsize, next) {
     var http = new XMLHttpRequest();
-    if (self._csrf)
-        filepath += (filepath.indexOf("?") > -1 ? "&" : "?") + "_csrf=" + self._csrf;
+    //if (self._csrf)
+    //    filepath += (filepath.indexOf("?") > -1 ? "&" : "?") + "_csrf=" + self._csrf;
     http.open("PUT", filepath, true);
     http.onreadystatechange = function(){
         if (http.readyState != 4)
@@ -83,7 +85,6 @@ self.uploadChunk = function(chunk, filepath, end, blobsize, next) {
             // file upload complete
             delete connections[filepath];
             connections.length--;
-            connections = [];
             return self.postMessage({type: "complete"});
         }
 
