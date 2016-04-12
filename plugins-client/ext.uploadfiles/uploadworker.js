@@ -83,6 +83,7 @@ self.uploadChunk = function(chunk, filepath, end, blobsize, next) {
             // file upload complete
             delete connections[filepath];
             connections.length--;
+            connections = [];
             return self.postMessage({type: "complete"});
         }
 
